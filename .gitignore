@@ -115,7 +115,7 @@ Backup*/
 UpgradeLog*.XML
 
 # Custom ignore files
-Codeforces/*
+Codeforces/
 
 ############
 ## Windows
