@@ -6,16 +6,16 @@ vector<int> BubbleSort(vector<int> inputElements) {
   vector<int> sortedList = inputElements;
   
   // Core of BubbleSort goes here
-  int i,j;
+  int pointerToElementInSortedList,pointerToUnsortedElements;
   int numberOfElements = sortedList.size();
   
-  for(i=0; i<numberOfElements; i++) {
-    for (j=numberOfElements-1; j>i; j--) {
-      if (sortedList[j] < sortedList[j-1]) {
+  for(pointerToElementInSortedList=0; pointerToElementInSortedList<numberOfElements; pointerToElementInSortedList++) {
+    for (pointerToUnsortedElements=numberOfElements-1; pointerToUnsortedElements>pointerToElementInSortedList; pointerToUnsortedElements--) {
+      if (sortedList[pointerToUnsortedElements] < sortedList[pointerToUnsortedElements-1]) {
         // Swap the elements
-        int temp = sortedList[j];
-        sortedList[j] = sortedList[j-1];
-        sortedList[j-1] = temp;
+        int temp = sortedList[pointerToUnsortedElements];
+        sortedList[pointerToUnsortedElements] = sortedList[pointerToUnsortedElements-1];
+        sortedList[pointerToUnsortedElements-1] = temp;
       }
     }
   }
