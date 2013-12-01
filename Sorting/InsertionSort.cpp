@@ -6,18 +6,18 @@ vector<int> InsertionSort(vector<int> inputElements) {
   vector<int> sortedList = inputElements;    
   
   // Core of InsertionSort goes here - Ascending sort
-  int pointerToUnsortedElements, pointerToSortedList;
+  int pointerToUnsortedElements, pointerToElementInSortedList;
   for (pointerToUnsortedElements = 1; pointerToUnsortedElements<sortedList.size(); pointerToUnsortedElements++) {
     int elementToBeInserted = sortedList[pointerToUnsortedElements];    
     
-    for(pointerToSortedList = pointerToUnsortedElements-1; pointerToSortedList>=0; pointerToSortedList--) {
-      if (elementToBeInserted >= sortedList[pointerToSortedList]) {
+    for(pointerToElementInSortedList = pointerToUnsortedElements-1; pointerToElementInSortedList>=0; pointerToElementInSortedList--) {
+      if (elementToBeInserted >= sortedList[pointerToElementInSortedList]) {
         break;
       }
-      sortedList[pointerToSortedList+1] = sortedList[pointerToSortedList];
+      sortedList[pointerToElementInSortedList+1] = sortedList[pointerToElementInSortedList];
     }
     
-    sortedList[pointerToSortedList+1] = elementToBeInserted;
+    sortedList[pointerToElementInSortedList+1] = elementToBeInserted;
   }
   
   return sortedList;
