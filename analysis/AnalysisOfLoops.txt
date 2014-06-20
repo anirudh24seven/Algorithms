@@ -1,0 +1,18 @@
+1) O(1):
+Time complexity of a function is considered as O(1) if it doesn't contain loop, recursion or call to any other non-constant time function. 
+A loop or recursion that runs a constant number of times is also considered as O(1).
+
+2) O(n):
+If loop variables are incremented/decremented by a constant amount.
+
+3) O(n^c):
+Nested loops. Equal to the number of times the innermost statement is executed.
+
+4) O(log n):
+If the loop variables are divided/multiplied by a constant amount.
+
+5) O(log log n):
+If loop variables are reduced/increased exponentially by a constant amount.
+
+
+When there are consecutive loops, we calculate the time complexity as sum of time complexities of individual loops.
