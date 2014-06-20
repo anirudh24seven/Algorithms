@@ -1,0 +1,18 @@
+There are mainly 3 ways to solve recurrences:
+
+1. Substitution method:
+We make a guess for the solution and we use mathematical induction to prove that the guess is correct.
+
+2. Recurrence Tree method:
+We draw a recurrence tree and calculate the time taken by every level of tree. Finally, we sum the work done at all levels.
+To draw the recurrence tree, we start from the given recurrence and keep drawing till we find a pattern among levels. The pattern is typically a arithmetic or geometric series.
+
+3. Master method:
+The master method is a direct way to get to the solution. This method works only for the following type of recurrences for for recurrences that can be transformed to the following type:
+
+T(n) = aT(n/b) + f(n) where a >= 1 and b > 1
+
+There are 3 following cases:
+1. If f(n) = Theta (n^c) where c < (log a to the base b), then T(n) = Theta (n ^ (log a to the base b))
+2. If f(n) = Theta (n^c) where c = (log a to the base b), then T(n) = Theta (n ^ c)
+3. If f(n) = Theta (n^c) where c > (log a to the base b), then T(n) = Theta (f(n))
